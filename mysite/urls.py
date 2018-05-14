@@ -18,10 +18,12 @@ Note: Edited doc so that my DjangoGirls tutorial blog will work using Django 2 i
 used in the tutorial. Referenced this help page on pythonanywhere:
 https://www.pythonanywhere.com/forums/topic/12453/
 """
+from django.conf.urls import include
 from django.conf.urls import url
 from django.contrib import admin
 #from django.urls import path
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'', include('blog.urls')),
 ]
